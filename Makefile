@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI
+CMAKE_SOURCE_DIR = /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI
+CMAKE_BINARY_DIR = /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/CMakeFiles /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/CMakeFiles /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MinimalWxExample
+# Target rules for targets named Test
 
 # Build rule for target.
-MinimalWxExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MinimalWxExample
-.PHONY : MinimalWxExample
+Test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test
+.PHONY : Test
 
 # fast build rule for target.
-MinimalWxExample/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MinimalWxExample.dir/build.make CMakeFiles/MinimalWxExample.dir/build
-.PHONY : MinimalWxExample/fast
+Test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
+.PHONY : Test/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MinimalWxExample.dir/build.make CMakeFiles/MinimalWxExample.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MinimalWxExample.dir/build.make CMakeFiles/MinimalWxExample.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MinimalWxExample.dir/build.make CMakeFiles/MinimalWxExample.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MinimalWxExample"
+	@echo "... Test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

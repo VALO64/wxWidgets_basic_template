@@ -1,4 +1,4 @@
-# Install script for directory: /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI
+# Install script for directory: /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/install_local_manifest.txt"
+  file(WRITE "/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

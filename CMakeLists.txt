@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20) # 3.20 is a good minimum, adjust as needed
-project(MinimalWxExample CXX)
+project(Test CXX)
 
 # Set C++ standard to 11
 set(CMAKE_CXX_STANDARD 11)

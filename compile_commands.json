@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI",
-  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -DwxDEBUG_LEVEL=0 -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.3 -isystem /usr/local/include/wx-3.3 -std=gnu++11 -o CMakeFiles/MinimalWxExample.dir/main.cpp.o -c /Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/main.cpp",
-  "file": "/Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/main.cpp",
-  "output": "CMakeFiles/MinimalWxExample.dir/main.cpp.o"
+  "directory": "/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template",
+  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -DwxDEBUG_LEVEL=0 -isystem /usr/local/lib/wx/include/osx_cocoa-unicode-3.3 -isystem /usr/local/include/wx-3.3 -std=gnu++11 -o CMakeFiles/Test.dir/main.cpp.o -c /Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/main.cpp",
+  "file": "/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/main.cpp",
+  "output": "CMakeFiles/Test.dir/main.cpp.o"
 }
 ]

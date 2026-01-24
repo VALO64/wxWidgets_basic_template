@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/oscar/Documents/projects/C_mas/C_UIs/hello_wolrd_UI/cmake_install.cmake"
+		"/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

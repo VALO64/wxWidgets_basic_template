@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/main.cpp" "CMakeFiles/MinimalWxExample.dir/main.cpp.o" "gcc" "CMakeFiles/MinimalWxExample.dir/main.cpp.o.d"
+  "/Users/oscar/Documents/projects/C_mas/C_UIs/Taxes_calculator_c/wxWidgets_basic_template/main.cpp" "CMakeFiles/Test.dir/main.cpp.o" "gcc" "CMakeFiles/Test.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
