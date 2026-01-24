@@ -1,105 +1,62 @@
-/*
-    Commands to build the project: 
-    cmake .
-    make
-    open Test.app
-*/
- 
-// For compilers that support precompilation, includes "wx/wx.h".
-#include<iostream>
-#include <wx/wxprec.h> //UI to work with the user interface
-using namespace std;
- 
-#ifndef WX_PRECOMP
-    #include <wx/wx.h>
-#endif
- 
+#include <wx/wx.h>
+
 class MyApp : public wxApp
 {
 public:
     virtual bool OnInit();
 };
- 
+
 class MyFrame : public wxFrame
 {
 public:
-    MyFrame();
- 
+    MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+
 private:
-    //Create events when they're clicked
     void OnExit(wxCommandEvent& event);
-    void OnButtonClick(wxCommandEvent& event);
-    wxTextCtrl * ivaCausadoTextBox;
-    wxTextCtrl * ivaRetenidoTextBox;
-    wxTextCtrl * resultTextBox;
-    wxButton * calculateButton;
+    void OnAbout(wxCommandEvent& event);
 };
- 
+
 enum
 {
-    ID_Hello = 1
+    ID_About = 1,
+    ID_Exit
 };
- 
+
 wxIMPLEMENT_APP(MyApp);
 
-//Function to initialize the frame
 bool MyApp::OnInit()
 {
-    MyFrame *frame = new MyFrame();
+    MyFrame *frame = new MyFrame("Minimal wxWidgets App", wxPoint(50, 50), wxSize(450, 340));
     frame->Show(true);
     return true;
 }
- 
-MyFrame::MyFrame() : wxFrame(NULL, wxID_ANY, "RESICO Calculator"){ //Creates the main frame / window with the title
-    ////--------------------Sizer of the layout ---------------------------
-    wxPanel* panel_inputs = new wxPanel (this, wxID_ANY); //That's the panel that will allocate the labels
-    wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
 
-    //--------------------Labels ---------------------------
-    wxStaticText* ivaCausadoLabel = new wxStaticText (panel_inputs, wxID_ANY, "Impuestos trasladados"); //This is the label that I'll create
-    wxStaticText* ivaRetenidoLaber = new wxStaticText (panel_inputs, wxID_ANY, "Impuestos retenidos"); 
+MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
+    : wxFrame(NULL, wxID_ANY, title, pos, size)
+{
+    wxMenu *menuFile = new wxMenu;
+    menuFile->Append(ID_About, "&About...\tCtrl-A", "Show about dialog");
+    menuFile->AppendSeparator();
+    menuFile->Append(ID_Exit, "E&xit\tCtrl-E", "Quit this program");
 
-    //--------------------Text Boxes ---------------------------
-    ivaCausadoTextBox = new wxTextCtrl (panel_inputs, wxID_ANY,"",wxPoint(10,10),wxSize(200,25));
-    ivaRetenidoTextBox = new wxTextCtrl (panel_inputs, wxID_ANY,"",wxPoint(10,10),wxSize(200,25));
-    resultTextBox = new wxTextCtrl(panel_inputs,wxID_PRINT,"El total a pagar: ",wxPoint(10,10),wxSize(200,25),wxTE_READONLY);
+    wxMenuBar *menuBar = new wxMenuBar;
+    menuBar->Append(menuFile, "&File");
 
-    //--------------------Buttons ---------------------------
-    calculateButton = new wxButton(panel_inputs, wxID_ANY, "Calculate", wxPoint(10,10), wxSize(200, 25));
-    sizer ->Add(ivaCausadoLabel, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 10);
-    sizer ->Add(ivaCausadoTextBox, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 2);
-    sizer ->Add(ivaRetenidoLaber, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 10);
-    sizer ->Add(ivaRetenidoTextBox, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 2);
-    sizer ->Add(calculateButton, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 10);
-    sizer ->Add(resultTextBox, 0, wxALL | wxALIGN_CENTER_HORIZONTAL, 2);
+    SetMenuBar(menuBar);
 
-    // //--------------------Linkers ---------------------------
-    calculateButton ->Bind(wxEVT_BUTTON, &MyFrame::OnButtonClick,this); //I linked the calculate button with the function of the button down below
-    panel_inputs ->SetSizerAndFit(sizer);
-    this -> Center();
+    Bind(wxEVT_MENU, &MyFrame::OnExit, this, ID_Exit);
+    Bind(wxEVT_MENU, &MyFrame::OnAbout, this, ID_About);
 
+    CreateStatusBar();
+    SetStatusText("Welcome to wxWidgets!");
 }
-void MyFrame::OnButtonClick(wxCommandEvent& event){
 
-    double total_a_pagar = 0.0;
-    double ivaCausado = 0.0;
-    double ivaRetenido = 0.0;
-
-    //- I got the values form the text boxes to do mathematical operations
-    ivaCausadoTextBox->GetValue().ToDouble(&ivaCausado);
-    ivaRetenidoTextBox ->GetValue().ToDouble(&ivaRetenido);
-    //- I substract the values
-    total_a_pagar = ivaCausado - ivaRetenido;
-    //- I changed the substract value to string to printed on the text box
-    std::string total_a_pagar_sring = std::to_string(total_a_pagar);
-    //- I print the value on the text box
-    resultTextBox->SetValue(wxString::Format("El total a pagar: %.2f", total_a_pagar));
-
-}
-//Function to close the window 
 void MyFrame::OnExit(wxCommandEvent& event)
 {
     Close(true);
 }
 
-
+void MyFrame::OnAbout(wxCommandEvent& event)
+{
+    wxMessageBox("This is a minimal wxWidgets example", "About Minimal", wxOK | wxICON_INFORMATION);
+}
